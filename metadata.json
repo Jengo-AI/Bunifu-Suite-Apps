@@ -1,6 +1,8 @@
 {
   "name": "Jengo AI Ecosystem",
-  "description": "A dark-themed landing page showcasing a suite of 14 creative and AI tools built for builders, creators, and communities.",
+  "description": "Minimalist high-contrast construction-grade infrastructure for creators, developers, and communities. 14 integrated apps built to ship, automate, and monetize.",
   "requestFramePermissions": [],
-  "majorCapabilities": []
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
 }
