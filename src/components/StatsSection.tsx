@@ -6,28 +6,28 @@ export const StatsSection: React.FC = () => {
     {
       num: "01",
       name: "BUILD",
-      desc: "Prompt engineering, UI layout generation, and context structuring engines.",
+      desc: "Deterministic prompt engineering, UI layout synthesis, and context structuring engines.",
       tools: "JengaPrompts, JengaUI, JengaContext, JengaForge",
       icon: Hammer,
     },
     {
       num: "02",
       name: "SHIP",
-      desc: "Visual reverse-engineering, thumbnail SEO/AEO optimization, and analytics.",
+      desc: "Visual reverse-engineering, thumbnail asset compilation, and creator metrics.",
       tools: "VizPrompts Studio, Thumbnail Safi, DataMambo",
       icon: Layers,
     },
     {
       num: "03",
       name: "GET SEEN",
-      desc: "Vibecoded creative showcases, book swaps, and community discovery hubs.",
+      desc: "Vibecoded creative showcases, peer knowledge exchange, and community discovery hubs.",
       tools: "VibeShareKE, BookShareKE",
       icon: Globe,
     },
     {
       num: "04",
       name: "GET PAID",
-      desc: "Frictionless M-Pesa micro-settlements, QR checkouts, and prompt marketplace.",
+      desc: "Direct M-Pesa micro-settlements, QR checkouts, and asset licensing workflows.",
       tools: "KahawaPay, PromptSoko",
       icon: Shield,
     },
@@ -45,7 +45,7 @@ export const StatsSection: React.FC = () => {
       <div className="max-w-7xl mx-auto">
         
         {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-12 mb-12 border-b border-[#0A0A0A]/10">
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-10 mb-10 border-b border-[#0A0A0A]/10">
           <div>
             <div className="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-[0.16em] text-[#6B6A63] font-semibold mb-2">
               <Radio size={14} className="text-[#0A0A0A]" />
@@ -56,8 +56,8 @@ export const StatsSection: React.FC = () => {
             </h2>
           </div>
 
-          <div className="font-mono text-xs text-[#6B6A63] max-w-sm">
-            Five synchronized lifecycle stages engineered to take an idea from initial prompt structure to full monetization.
+          <div className="font-mono text-xs text-[#6B6A63] max-w-sm leading-relaxed">
+            Five synchronized lifecycle stages engineered to take an idea from initial prompt structure to autonomous execution.
           </div>
         </div>
 
@@ -68,11 +68,11 @@ export const StatsSection: React.FC = () => {
             return (
               <div
                 key={stage.num}
-                className="p-5 bg-[#FAF9F5] border-2 border-[#0A0A0A] rounded-lg flex flex-col justify-between shadow-[3px_3px_0px_#0A0A0A] hover:bg-[#FFF6C9] transition-colors"
+                className="p-5 bg-[#FAF9F5] border-2 border-[#0A0A0A] rounded-[8px] flex flex-col justify-between hover:bg-[#FFF6C9] transition-colors"
               >
                 <div>
                   <div className="flex items-center justify-between mb-4">
-                    <span className="font-mono font-bold text-xs px-2 py-0.5 bg-[#0A0A0A] text-[#FFD100] rounded">
+                    <span className="font-mono font-bold text-xs px-2 py-0.5 bg-[#0A0A0A] text-[#FFD100] rounded-[4px]">
                       {stage.num}
                     </span>
                     <IconComp size={18} className="text-[#0A0A0A]" />
@@ -82,7 +82,7 @@ export const StatsSection: React.FC = () => {
                     {stage.name}
                   </h3>
 
-                  <p className="font-sans text-xs text-[#0A0A0A] leading-relaxed mb-4">
+                  <p className="font-sans text-xs text-[#6B6A63] leading-relaxed mb-4">
                     {stage.desc}
                   </p>
                 </div>
@@ -97,8 +97,8 @@ export const StatsSection: React.FC = () => {
         </div>
 
         {/* Construction Philosophy Banner */}
-        <div className="mt-12 p-6 bg-[#0A0A0A] text-white border-2 border-[#0A0A0A] rounded-lg flex flex-col lg:flex-row items-center justify-between gap-6 relative overflow-hidden">
-          <div className="w-full lg:w-3 h-3 lg:h-full hazard-stripe absolute top-0 left-0" />
+        <div className="mt-10 p-6 bg-[#0A0A0A] text-white border-2 border-[#0A0A0A] rounded-[8px] flex flex-col lg:flex-row items-center justify-between gap-6 relative overflow-hidden">
+          <div className="w-full lg:w-2.5 h-2.5 lg:h-full hazard-stripe absolute top-0 left-0" />
           
           <div className="lg:pl-6">
             <div className="font-mono text-[11px] uppercase tracking-wider text-[#FFD100] font-bold mb-1">
@@ -110,7 +110,7 @@ export const StatsSection: React.FC = () => {
           </div>
 
           <div className="shrink-0 font-mono text-xs text-right">
-            <span className="px-3 py-1.5 bg-[#FFD100] text-[#0A0A0A] font-bold rounded border border-[#0A0A0A]">
+            <span className="px-3 py-1.5 bg-[#FFD100] text-[#0A0A0A] font-bold rounded-[4px] border border-[#0A0A0A]">
               NAIROBI 🇰🇪 · STUDIO JENGO
             </span>
           </div>

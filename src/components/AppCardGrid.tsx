@@ -13,14 +13,15 @@ export const AppCardGrid: React.FC<AppCardGridProps> = ({ apps, onOpenSpecs }) =
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {apps.map((app) => {
           const IconComponent = app.icon;
+          const isLive = app.status === "LIVE";
           return (
             <div
               key={app.id}
-              className="bg-white border-2 border-[#0A0A0A] rounded-lg p-6 flex flex-col justify-between relative shadow-[4px_4px_0px_#0A0A0A] hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[6px_6px_0px_#0A0A0A] transition-all group"
+              className="bg-white border-2 border-[#0A0A0A] rounded-[8px] p-6 flex flex-col justify-between relative group"
             >
-              {/* Pro Badge Top-Right Corner */}
+              {/* Pro Badge Top-Right Corner Offset: yellow fill, black bold text, small rectangular tag */}
               {app.isPro && (
-                <div className="absolute -top-3 right-4 px-2.5 py-0.5 bg-[#FFD100] text-[#0A0A0A] font-mono font-bold text-[10px] uppercase border-2 border-[#0A0A0A] rounded shadow-[2px_2px_0px_#0A0A0A]">
+                <div className="absolute -top-3 right-4 px-2.5 py-0.5 bg-[#FFD100] text-[#0A0A0A] font-mono font-bold text-[10px] uppercase border-2 border-[#0A0A0A] rounded-[4px] tracking-wider">
                   PRO SPEC
                 </div>
               )}
@@ -29,22 +30,29 @@ export const AppCardGrid: React.FC<AppCardGridProps> = ({ apps, onOpenSpecs }) =
               <div>
                 {/* Header Row: Icon + Ref Code + Status */}
                 <div className="flex items-start justify-between gap-4 mb-4">
-                  <div className="w-14 h-14 bg-[#FFF6C9] border-2 border-[#0A0A0A] rounded-md flex items-center justify-center shrink-0 shadow-[2px_2px_0px_#0A0A0A]">
+                  {/* Icon in yellow-tint square with 2px black border, 6px radius, no shadow */}
+                  <div className="w-14 h-14 bg-[#FFF6C9] border-2 border-[#0A0A0A] rounded-[6px] flex items-center justify-center shrink-0">
                     <IconComponent size={26} strokeWidth={1.75} className="text-[#0A0A0A]" />
                   </div>
 
                   <div className="text-right">
-                    <span className="font-mono text-[10px] text-[#6B6A63] block uppercase">
-                      {app.code}
+                    <span className="font-mono text-[10px] text-[#6B6A63] block uppercase font-semibold">
+                      REF // {app.code}
                     </span>
-                    <span className="inline-block mt-1 px-2 py-0.5 bg-[#0A0A0A] text-[#FFD100] font-mono font-bold text-[9px] uppercase rounded-sm">
+                    <span
+                      className={`inline-block mt-1 px-2 py-0.5 font-mono font-bold text-[9px] uppercase rounded-full border ${
+                        isLive
+                          ? "bg-[#0A0A0A] text-[#FFD100] border-[#0A0A0A]"
+                          : "bg-white text-[#0A0A0A] border-[#0A0A0A]"
+                      }`}
+                    >
                       {app.status} · {app.version}
                     </span>
                   </div>
                 </div>
 
-                {/* App Name: Space Grotesk */}
-                <h3 className="font-display font-bold text-2xl text-[#0A0A0A] tracking-tight mb-2 group-hover:text-[#0A0A0A]">
+                {/* App Name: Space Grotesk 700 */}
+                <h3 className="font-display font-bold text-2xl text-[#0A0A0A] tracking-tight mb-2">
                   {app.name}
                 </h3>
 
@@ -52,17 +60,17 @@ export const AppCardGrid: React.FC<AppCardGridProps> = ({ apps, onOpenSpecs }) =
                 <div className="flex items-center gap-2 font-mono text-[10px] uppercase text-[#6B6A63] mb-4">
                   <span className="font-bold text-[#0A0A0A]">{app.category}</span>
                   <span>//</span>
-                  <span className="px-1.5 py-0.2 bg-[#FAF9F5] border border-[#DCDACF] rounded text-[#0A0A0A]">
+                  <span className="px-1.5 py-0.5 bg-[#FAF9F5] border border-[#DCDACF] rounded-[4px] text-[#0A0A0A]">
                     {app.stageTag}
                   </span>
                 </div>
 
-                {/* Description */}
-                <p className="font-sans text-sm text-[#0A0A0A] leading-relaxed mb-6 line-clamp-3">
+                {/* Description: gray body copy */}
+                <p className="font-sans text-sm text-[#6B6A63] leading-relaxed mb-6 line-clamp-3">
                   {app.description}
                 </p>
 
-                {/* Tags */}
+                {/* Tags: JetBrains Mono, uppercase, 1px black border, pill radius */}
                 <div className="flex flex-wrap gap-1.5 mb-6">
                   {app.tags.map((tag) => (
                     <span
@@ -84,7 +92,7 @@ export const AppCardGrid: React.FC<AppCardGridProps> = ({ apps, onOpenSpecs }) =
                 <div className="grid grid-cols-2 gap-2">
                   <button
                     onClick={() => onOpenSpecs(app)}
-                    className="px-3 py-2 bg-white text-[#0A0A0A] font-mono text-[11px] uppercase tracking-wider border-2 border-[#0A0A0A] rounded hover:bg-[#FFF6C9] transition-colors flex items-center justify-center gap-1 cursor-pointer"
+                    className="px-3 py-2 bg-transparent text-[#0A0A0A] font-mono text-[11px] uppercase tracking-wider border-2 border-[#0A0A0A] rounded-[6px] hover:bg-[#FFF6C9] transition-colors flex items-center justify-center gap-1 cursor-pointer"
                   >
                     <FileText size={12} />
                     <span>Specs</span>
@@ -94,7 +102,7 @@ export const AppCardGrid: React.FC<AppCardGridProps> = ({ apps, onOpenSpecs }) =
                     href={app.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="px-3 py-2 bg-[#FFD100] text-[#0A0A0A] font-display font-bold text-[11px] uppercase tracking-wider border-2 border-[#0A0A0A] rounded hover:bg-[#FFD100]/90 transition-all flex items-center justify-center gap-1 cursor-pointer"
+                    className="px-3 py-2 bg-[#FFD100] text-[#0A0A0A] font-display font-bold text-[11px] uppercase tracking-wider border-2 border-[#0A0A0A] rounded-[6px] hover:bg-[#0A0A0A] hover:text-[#FFD100] transition-colors flex items-center justify-center gap-1 cursor-pointer text-center"
                   >
                     <span>Launch</span>
                     <ArrowUpRight size={14} />

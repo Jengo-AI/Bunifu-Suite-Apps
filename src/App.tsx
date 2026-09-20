@@ -88,7 +88,7 @@ export default function App() {
         <main className="min-h-[500px] bg-blueprint-grid">
           {filteredApps.length === 0 ? (
             <div className="max-w-xl mx-auto px-6 py-24 text-center">
-              <div className="w-16 h-16 bg-[#FFF6C9] border-2 border-[#0A0A0A] rounded-full flex items-center justify-center mx-auto mb-4 shadow-[3px_3px_0px_#0A0A0A]">
+              <div className="w-16 h-16 bg-[#FFF6C9] border-2 border-[#0A0A0A] rounded-full flex items-center justify-center mx-auto mb-4">
                 <AlertCircle size={28} className="text-[#0A0A0A]" />
               </div>
               <h3 className="font-display font-bold text-2xl text-[#0A0A0A] uppercase mb-2">
@@ -99,7 +99,7 @@ export default function App() {
               </p>
               <button
                 onClick={handleResetFilters}
-                className="px-5 py-2.5 bg-[#FFD100] text-[#0A0A0A] font-mono text-xs uppercase font-bold tracking-wider border-2 border-[#0A0A0A] rounded shadow-[2px_2px_0px_#0A0A0A] hover:bg-[#FFF6C9] transition-all inline-flex items-center gap-2 cursor-pointer"
+                className="px-5 py-2.5 bg-[#FFD100] text-[#0A0A0A] font-mono text-xs uppercase font-bold tracking-wider border-2 border-[#0A0A0A] rounded-[6px] hover:bg-[#0A0A0A] hover:text-[#FFD100] transition-colors inline-flex items-center gap-2 cursor-pointer"
               >
                 <RotateCcw size={14} />
                 <span>Reset All Filters</span>

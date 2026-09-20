@@ -11,14 +11,14 @@ export const Footer: React.FC = () => {
       {/* Bottom Hazard Stripe */}
       <div className="w-full h-2 hazard-stripe" />
 
-      <div className="max-w-7xl mx-auto px-6 lg:px-16 py-16">
+      <div className="max-w-7xl mx-auto px-6 lg:px-16 py-14">
         
         {/* Main Footer Row */}
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-10 pb-12 border-b-2 border-[#0A0A0A]">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-10 pb-10 border-b-2 border-[#0A0A0A]">
           
           {/* Col 1: Wordmark & Philosophy */}
           <div className="md:col-span-5">
-            <div className="font-display font-bold text-3xl tracking-tight text-[#0A0A0A] flex items-baseline mb-3">
+            <div className="font-display font-bold text-3xl tracking-tight text-[#0A0A0A] flex items-baseline mb-3 select-none">
               Jengo<span className="text-[#FFD100] font-black text-4xl leading-none">.</span>AI
             </div>
             
@@ -26,7 +26,7 @@ export const Footer: React.FC = () => {
               A minimalist black, yellow, and white system for every Bunifu Suite app — engineered to feel like construction-grade infrastructure.
             </p>
 
-            <div className="p-3 bg-white border-2 border-[#0A0A0A] rounded-md font-mono text-xs text-[#0A0A0A] flex items-center gap-2 max-w-sm">
+            <div className="p-3 bg-white border-2 border-[#0A0A0A] rounded-[6px] font-mono text-xs text-[#0A0A0A] flex items-center gap-2 max-w-sm">
               <Terminal size={14} className="text-[#0A0A0A]" />
               <span><strong>JENGA (v.)</strong> — Swahili: <em>to build, to construct</em></span>
             </div>
@@ -40,8 +40,8 @@ export const Footer: React.FC = () => {
             </div>
 
             <ul className="grid grid-cols-2 gap-2 text-[#6B6A63]">
-              <li><a href="https://selar.com/if1n4lz5x8" target="_blank" rel="noreferrer" className="hover:text-[#0A0A0A] hover:underline">JengaPrompts</a></li>
-              <li><a href="https://selar.com/5z62422237" target="_blank" rel="noreferrer" className="hover:text-[#0A0A0A] hover:underline">JengaPrompts Pro</a></li>
+              <li><a href="https://selar.com/if1n4lz5x8" target="_blank" rel="noreferrer" className="hover:text-[#0A0A0A] hover:underline">JengoPrompts</a></li>
+              <li><a href="https://selar.com/5z62422237" target="_blank" rel="noreferrer" className="hover:text-[#0A0A0A] hover:underline">JengoPrompts Pro</a></li>
               <li><a href="https://selar.com/0he04x" target="_blank" rel="noreferrer" className="hover:text-[#0A0A0A] hover:underline">VizPrompts Studio</a></li>
               <li><a href="https://selar.com/174557z34n" target="_blank" rel="noreferrer" className="hover:text-[#0A0A0A] hover:underline">VizPrompts Pro</a></li>
               <li><a href="https://selar.com/33571kf42k" target="_blank" rel="noreferrer" className="hover:text-[#0A0A0A] hover:underline">JengaForge</a></li>
@@ -71,7 +71,7 @@ export const Footer: React.FC = () => {
 
             <button
               onClick={scrollToTop}
-              className="w-full py-3 px-4 bg-white text-[#0A0A0A] font-mono text-xs font-bold uppercase tracking-wider border-2 border-[#0A0A0A] rounded-md shadow-[3px_3px_0px_#0A0A0A] hover:bg-[#FFD100] transition-all flex items-center justify-center gap-2 cursor-pointer"
+              className="w-full py-3 px-4 bg-transparent text-[#0A0A0A] font-mono text-xs font-bold uppercase tracking-wider border-2 border-[#0A0A0A] rounded-[6px] hover:bg-[#FFD100] transition-colors flex items-center justify-center gap-2 cursor-pointer"
             >
               <span>Return To Surface</span>
               <ArrowUp size={14} />
